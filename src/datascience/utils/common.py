@@ -12,16 +12,20 @@ from box.exceptions import BoxValueError
 
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
-
     try:
         with open(path_to_yaml) as yaml_file:
             content = yaml.safe_load(yaml_file)
+
+            if content is None:   # handles empty yaml
+                logger.warning(f"{path_to_yaml} is empty. Returning empty config.")
+                return ConfigBox({})
+
             logger.info(f"yaml file: {path_to_yaml} loaded successfully")
             return ConfigBox(content)
-    except BoxValueError:
-        raise ValueError("yaml file is empty")
-    except Exception as e:
-        raise e
+
+    except FileNotFoundError:
+        logger.warning(f"{path_to_yaml} not found. Returning empty config.")
+        return ConfigBox({})
     
 
 @ensure_annotations
