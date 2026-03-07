@@ -189,3 +189,59 @@ x==========x]
 [2026-03-06 19:23:53,425: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
 
 x==========x]
+[2026-03-07 12:25:00,351: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:25:00,352: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:25:00,354: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:25:00,355: WARNING: common: params.yaml is empty. Returning empty config.]
+[2026-03-07 12:25:00,356: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:25:00,358: INFO: common: created directory at: artifacts]
+[2026-03-07 12:25:00,359: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:25:00,359: INFO: data_ingestion: File already exist]
+[2026-03-07 12:25:00,366: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:25:00,366: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:25:00,369: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:25:00,370: WARNING: common: params.yaml is empty. Returning empty config.]
+[2026-03-07 12:25:00,373: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:25:00,374: INFO: common: created directory at: artifacts]
+[2026-03-07 12:25:00,375: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:25:00,394: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:25:00,396: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:25:00,396: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:26:38,419: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:26:38,419: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:26:38,421: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:26:38,422: WARNING: common: params.yaml is empty. Returning empty config.]
+[2026-03-07 12:26:38,423: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:26:38,424: INFO: common: created directory at: artifacts]
+[2026-03-07 12:26:38,424: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:26:38,424: INFO: data_ingestion: File already exist]
+[2026-03-07 12:26:38,428: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:26:38,428: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:26:38,429: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:26:38,431: WARNING: common: params.yaml is empty. Returning empty config.]
+[2026-03-07 12:26:38,432: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:26:38,433: INFO: common: created directory at: artifacts]
+[2026-03-07 12:26:38,433: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:26:38,447: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:26:38,447: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:26:38,449: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:26:38,449: WARNING: common: params.yaml is empty. Returning empty config.]
+[2026-03-07 12:26:38,450: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:26:38,451: INFO: common: created directory at: artifacts]
+[2026-03-07 12:26:38,452: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:26:38,472: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:26:38,472: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:26:38,472: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:26:38,472: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
