@@ -245,3 +245,525 @@ x==========x]
 [2026-03-07 12:26:38,472: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
 
 x==========x]
+[2026-03-07 12:51:23,141: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:51:23,141: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:51:23,143: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:51:23,144: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:51:23,145: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:51:23,145: INFO: common: created directory at: artifacts]
+[2026-03-07 12:51:23,146: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:51:23,146: INFO: data_ingestion: File already exist]
+[2026-03-07 12:51:23,149: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:51:23,149: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:51:23,153: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:51:23,154: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:51:23,156: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:51:23,157: INFO: common: created directory at: artifacts]
+[2026-03-07 12:51:23,157: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:51:23,172: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:51:23,172: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:51:23,175: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:51:23,176: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:51:23,177: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:51:23,179: INFO: common: created directory at: artifacts]
+[2026-03-07 12:51:23,180: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:51:23,199: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:51:23,199: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:51:23,200: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:51:23,200: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:51:23,200: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2026-03-07 12:51:23,202: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:51:23,202: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:51:23,205: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:51:23,205: INFO: common: created directory at: artifacts]
+[2026-03-07 12:51:23,206: INFO: common: created directory at: artifacts/model_trainer]
+[2026-03-07 12:51:23,207: ERROR: main: "'ConfigBox' object has no attribute 'l1_ratio'"]
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'l1_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'l1_ratio'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'l1_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'l1_ratio'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'l1_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'l1_ratio'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'l1_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\main.py", line 44, in <module>
+    data_ingestion.initiate_model_trainer()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\pipeline\model_trainer.py", line 14, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\config\configuration.py", line 86, in get_model_trainer_config
+    l1_ratio = params.l1_ratio,
+               ^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'l1_ratio'"
+[2026-03-07 12:51:56,759: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:51:56,759: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:51:56,761: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:51:56,762: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:51:56,763: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:51:56,764: INFO: common: created directory at: artifacts]
+[2026-03-07 12:51:56,764: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:51:56,765: INFO: data_ingestion: File already exist]
+[2026-03-07 12:51:56,768: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:51:56,768: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:51:56,770: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:51:56,772: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:51:56,773: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:51:56,774: INFO: common: created directory at: artifacts]
+[2026-03-07 12:51:56,774: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:51:56,787: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:51:56,787: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:51:56,790: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:51:56,791: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:51:56,792: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:51:56,793: INFO: common: created directory at: artifacts]
+[2026-03-07 12:51:56,793: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:51:56,810: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:51:56,810: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:51:56,811: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:51:56,811: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:51:56,811: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2026-03-07 12:51:56,813: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:51:56,814: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:51:56,815: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:51:56,815: INFO: common: created directory at: artifacts]
+[2026-03-07 12:51:56,815: INFO: common: created directory at: artifacts/model_trainer]
+[2026-03-07 12:51:56,816: ERROR: main: ModelTrainerConfig.__init__() got an unexpected keyword argument 'l1_ratio']
+Traceback (most recent call last):
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\main.py", line 44, in <module>
+    data_ingestion.initiate_model_trainer()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\pipeline\model_trainer.py", line 14, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\config\configuration.py", line 80, in get_model_trainer_config
+    model_trainer_config = ModelTrainerConfig(
+                           ^^^^^^^^^^^^^^^^^^^
+TypeError: ModelTrainerConfig.__init__() got an unexpected keyword argument 'l1_ratio'
+[2026-03-07 12:52:50,879: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:52:50,879: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:52:50,881: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:52:50,882: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:52:50,883: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:52:50,884: INFO: common: created directory at: artifacts]
+[2026-03-07 12:52:50,884: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:52:50,885: INFO: data_ingestion: File already exist]
+[2026-03-07 12:52:50,888: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:52:50,888: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:52:50,890: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:52:50,890: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:52:50,893: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:52:50,894: INFO: common: created directory at: artifacts]
+[2026-03-07 12:52:50,894: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:52:50,907: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:52:50,907: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:52:50,909: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:52:50,910: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:52:50,911: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:52:50,911: INFO: common: created directory at: artifacts]
+[2026-03-07 12:52:50,912: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:52:50,929: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:52:50,929: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:52:50,929: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:52:50,930: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:52:50,930: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2026-03-07 12:52:50,931: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:52:50,932: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:52:50,933: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:52:50,935: INFO: common: created directory at: artifacts]
+[2026-03-07 12:52:50,935: INFO: common: created directory at: artifacts/model_trainer]
+[2026-03-07 12:52:50,941: ERROR: main: 'ModelTrainerConfig' object has no attribute 'l1_ratio']
+Traceback (most recent call last):
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\main.py", line 44, in <module>
+    data_ingestion.initiate_model_trainer()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\pipeline\model_trainer.py", line 16, in initiate_model_trainer
+    model_trainer.train()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\components\model_trainer.py", line 24, in train
+    lr = ElasticNet(alpha=self.config.alpha, l1_ratio=self.config.l1_ratio, random_state=42)
+                                                      ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ModelTrainerConfig' object has no attribute 'l1_ratio'
+[2026-03-07 12:53:29,366: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:53:29,367: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:53:29,369: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:53:29,369: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:53:29,371: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:53:29,371: INFO: common: created directory at: artifacts]
+[2026-03-07 12:53:29,372: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:53:29,372: INFO: data_ingestion: File already exist]
+[2026-03-07 12:53:29,374: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:53:29,376: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:53:29,377: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:53:29,378: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:53:29,380: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:53:29,380: INFO: common: created directory at: artifacts]
+[2026-03-07 12:53:29,381: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:53:29,393: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:53:29,394: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:53:29,395: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:53:29,396: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:53:29,398: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:53:29,398: INFO: common: created directory at: artifacts]
+[2026-03-07 12:53:29,399: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:53:29,415: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:53:29,415: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:53:29,415: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:53:29,417: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:53:29,417: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2026-03-07 12:53:29,419: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:53:29,420: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:53:29,421: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:53:29,422: INFO: common: created directory at: artifacts]
+[2026-03-07 12:53:29,422: INFO: common: created directory at: artifacts/model_trainer]
+[2026-03-07 12:53:29,427: ERROR: main: 'ModelTrainerConfig' object has no attribute 'l1_ratio']
+Traceback (most recent call last):
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\main.py", line 44, in <module>
+    data_ingestion.initiate_model_trainer()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\pipeline\model_trainer.py", line 16, in initiate_model_trainer
+    model_trainer.train()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\components\model_trainer.py", line 24, in train
+    lr = ElasticNet(alpha=self.config.alpha, lr_ratio=self.config.l1_ratio, random_state=42)
+                                                      ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ModelTrainerConfig' object has no attribute 'l1_ratio'
+[2026-03-07 12:53:45,610: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:53:45,610: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:53:45,613: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:53:45,613: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:53:45,615: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:53:45,615: INFO: common: created directory at: artifacts]
+[2026-03-07 12:53:45,616: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:53:45,616: INFO: data_ingestion: File already exist]
+[2026-03-07 12:53:45,619: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:53:45,620: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:53:45,621: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:53:45,623: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:53:45,624: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:53:45,625: INFO: common: created directory at: artifacts]
+[2026-03-07 12:53:45,625: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:53:45,638: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:53:45,638: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:53:45,640: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:53:45,641: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:53:45,643: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:53:45,646: INFO: common: created directory at: artifacts]
+[2026-03-07 12:53:45,646: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:53:45,664: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:53:45,665: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:53:45,665: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:53:45,665: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:53:45,666: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2026-03-07 12:53:45,667: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:53:45,668: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:53:45,669: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:53:45,670: INFO: common: created directory at: artifacts]
+[2026-03-07 12:53:45,670: INFO: common: created directory at: artifacts/model_trainer]
+[2026-03-07 12:53:45,675: ERROR: main: ElasticNet.__init__() got an unexpected keyword argument 'lr_ratio']
+Traceback (most recent call last):
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\main.py", line 44, in <module>
+    data_ingestion.initiate_model_trainer()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\pipeline\model_trainer.py", line 16, in initiate_model_trainer
+    model_trainer.train()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\components\model_trainer.py", line 24, in train
+    lr = ElasticNet(alpha=self.config.alpha, lr_ratio=self.config.lr_ratio, random_state=42)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ElasticNet.__init__() got an unexpected keyword argument 'lr_ratio'
+[2026-03-07 12:55:07,724: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:55:07,725: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:55:07,726: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:55:07,728: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:55:07,729: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:55:07,730: INFO: common: created directory at: artifacts]
+[2026-03-07 12:55:07,730: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:55:07,730: INFO: data_ingestion: File already exist]
+[2026-03-07 12:55:07,734: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:55:07,734: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:55:07,736: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:55:07,736: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:55:07,738: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:55:07,739: INFO: common: created directory at: artifacts]
+[2026-03-07 12:55:07,739: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:55:07,752: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:55:07,753: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:55:07,754: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:55:07,755: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:55:07,756: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:55:07,757: INFO: common: created directory at: artifacts]
+[2026-03-07 12:55:07,757: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:55:07,784: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:55:07,785: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:55:07,785: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:55:07,786: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:55:07,786: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2026-03-07 12:55:07,789: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:55:07,793: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:55:07,796: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:55:07,797: INFO: common: created directory at: artifacts]
+[2026-03-07 12:55:07,798: INFO: common: created directory at: artifacts/model_trainer]
+[2026-03-07 12:55:07,806: ERROR: main: ElasticNet.__init__() got an unexpected keyword argument 'll_ratio']
+Traceback (most recent call last):
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\main.py", line 44, in <module>
+    data_ingestion.initiate_model_trainer()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\pipeline\model_trainer.py", line 16, in initiate_model_trainer
+    model_trainer.train()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\components\model_trainer.py", line 24, in train
+    lr = ElasticNet(alpha=self.config.alpha, ll_ratio=self.config.lr_ratio, random_state=42)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ElasticNet.__init__() got an unexpected keyword argument 'll_ratio'
+[2026-03-07 12:55:49,758: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:55:49,758: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:55:49,758: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:55:49,758: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:55:49,762: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:55:49,762: INFO: common: created directory at: artifacts]
+[2026-03-07 12:55:49,762: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:55:49,762: INFO: data_ingestion: File already exist]
+[2026-03-07 12:55:49,767: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:55:49,768: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:55:49,770: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:55:49,770: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:55:49,771: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:55:49,773: INFO: common: created directory at: artifacts]
+[2026-03-07 12:55:49,773: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:55:49,786: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:55:49,786: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:55:49,787: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:55:49,789: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:55:49,790: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:55:49,791: INFO: common: created directory at: artifacts]
+[2026-03-07 12:55:49,791: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:55:49,799: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:55:49,799: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:55:49,799: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:55:49,799: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:55:49,809: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2026-03-07 12:55:49,811: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:55:49,811: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:55:49,812: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:55:49,813: INFO: common: created directory at: artifacts]
+[2026-03-07 12:55:49,813: INFO: common: created directory at: artifacts/model_trainer]
+[2026-03-07 12:55:49,814: ERROR: main: "'ConfigBox' object has no attribute 'lr_ratio'"]
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'lr_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'lr_ratio'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'lr_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'lr_ratio'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'lr_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'lr_ratio'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'lr_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\main.py", line 44, in <module>
+    data_ingestion.initiate_model_trainer()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\pipeline\model_trainer.py", line 14, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\config\configuration.py", line 86, in get_model_trainer_config
+    lr_ratio = params.lr_ratio,
+               ^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'lr_ratio'"
+[2026-03-07 12:57:27,006: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:57:27,007: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:57:27,008: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:57:27,009: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:57:27,011: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:57:27,011: INFO: common: created directory at: artifacts]
+[2026-03-07 12:57:27,012: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:57:27,012: INFO: data_ingestion: File already exist]
+[2026-03-07 12:57:27,017: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:57:27,017: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:57:27,019: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:57:27,020: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:57:27,022: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:57:27,023: INFO: common: created directory at: artifacts]
+[2026-03-07 12:57:27,023: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:57:27,037: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:57:27,037: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:57:27,041: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:57:27,042: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:57:27,043: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:57:27,044: INFO: common: created directory at: artifacts]
+[2026-03-07 12:57:27,044: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:57:27,065: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:57:27,066: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:57:27,066: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:57:27,066: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:57:27,066: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2026-03-07 12:57:27,068: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:57:27,069: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:57:27,071: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:57:27,072: INFO: common: created directory at: artifacts]
+[2026-03-07 12:57:27,072: INFO: common: created directory at: artifacts/model_trainer]
+[2026-03-07 12:57:27,079: ERROR: main: ElasticNet.__init__() got an unexpected keyword argument 'll_ratio']
+Traceback (most recent call last):
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\main.py", line 44, in <module>
+    data_ingestion.initiate_model_trainer()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\pipeline\model_trainer.py", line 16, in initiate_model_trainer
+    model_trainer.train()
+  File "D:\Personal_projects\ML_OPS\datascienceproject_1\src\datascience\components\model_trainer.py", line 24, in train
+    lr = ElasticNet(alpha=self.config.alpha, ll_ratio=self.config.ll_ratio, random_state=42)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ElasticNet.__init__() got an unexpected keyword argument 'll_ratio'
+[2026-03-07 12:58:48,118: INFO: main: Welcome to our custom logging datascience project]
+[2026-03-07 12:58:48,119: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2026-03-07 12:58:48,120: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:58:48,121: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:58:48,122: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:58:48,123: INFO: common: created directory at: artifacts]
+[2026-03-07 12:58:48,123: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-03-07 12:58:48,124: INFO: data_ingestion: File already exist]
+[2026-03-07 12:58:48,126: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:58:48,127: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2026-03-07 12:58:48,129: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:58:48,130: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:58:48,131: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:58:48,132: INFO: common: created directory at: artifacts]
+[2026-03-07 12:58:48,132: INFO: common: created directory at: artifacts/data_validation]
+[2026-03-07 12:58:48,144: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:58:48,145: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2026-03-07 12:58:48,146: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:58:48,146: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:58:48,149: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:58:48,150: INFO: common: created directory at: artifacts]
+[2026-03-07 12:58:48,150: INFO: common: created directory at: artifacts/data_transformation]
+[2026-03-07 12:58:48,166: INFO: data_transformation: Splitting data into training and test sets]
+[2026-03-07 12:58:48,167: INFO: data_transformation: (1199, 12)]
+[2026-03-07 12:58:48,167: INFO: data_transformation: (400, 12)]
+[2026-03-07 12:58:48,167: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2026-03-07 12:58:48,167: INFO: main: >>>>>> stage Model Training stage started <<<<<<]
+[2026-03-07 12:58:48,169: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-03-07 12:58:48,170: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-03-07 12:58:48,172: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-03-07 12:58:48,172: INFO: common: created directory at: artifacts]
+[2026-03-07 12:58:48,173: INFO: common: created directory at: artifacts/model_trainer]
+[2026-03-07 12:58:48,187: INFO: main: >>>>>> stage Model Training stage completed <<<<<<
+
+x==========x]
